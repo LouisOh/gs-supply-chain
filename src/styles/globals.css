@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    --background:       11 14 17;
+    --foreground:       241 245 249;
+    --card:             19 23 29;
+    --card-foreground:  241 245 249;
+    --popover:          26 31 40;
+    --popover-foreground: 241 245 249;
+    --primary:          245 158 11;
+    --primary-foreground: 11 14 17;
+    --secondary:        59 130 246;
+    --secondary-foreground: 241 245 249;
+    --muted:            46 55 72;
+    --muted-foreground: 148 163 184;
+    --accent:           26 31 40;
+    --accent-foreground: 241 245 249;
+    --destructive:      239 68 68;
+    --border:           36 43 54;
+    --input:            36 43 54;
+    --ring:             245 158 11;
+    --radius:           0.75rem;
+  }
+
+  * {
+    border-color: theme('colors.border');
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
+  }
+
+  body {
+    background-color: #0B0E11;
+    color: #F1F5F9;
+    font-family: 'IBM Plex Sans', system-ui, sans-serif;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer utilities {
+  .scrollbar-none {
+    scrollbar-width: none;
+  }
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-thin {
+    scrollbar-width: thin;
+  }
+  .scrollbar-thumb-zinc-800::-webkit-scrollbar-thumb {
+    background-color: #27272a;
+    border-radius: 9999px;
+  }
+  .scrollbar-track-transparent::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0B0E11;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(184,151,62,0.3);
+    border-radius: 0;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #F59E0B;
+  }
+}
